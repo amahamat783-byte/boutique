@@ -8,30 +8,27 @@ print(f"3 :le Soda est à :{prix_Soda} FCFA")
 print("="*30)
 
 demande=input("Choisissez ce que vous voulez monsieur : 1-Eau ,2-Jus ,3-Soda  :")
-
-if demande=='1':
+if demande in ["1","2","3"]:
     mon_argent=int(input("Entrez votre argent :"))
-    if mon_argent>=prix_Eau:
-        print("Eau distribué")
-        monnaie=mon_argent-prix_Eau
-        print("Solde restant :",monnaie)
-    else:
-        print("Argent insuffisent")
-elif demande=='2':
-    mon_argent=int(input("Entrez votre argent :"))
-    if mon_argent>=prix_Jus:
-        print("Jus distribué")
-        monnaie=mon_argent-prix_Jus
-        print("Solde restant :",monnaie)
-    else:
-        print("Argent insuffisent")
-elif demande=='3':
-    mon_argent=int(input("Entrez votre argent :"))
-    if mon_argent>=prix_Soda:
-        print("Soda distribué")
-        monnaie=mon_argent-prix_Soda
-        print("Solde restant :",monnaie)
-    else:
-        print("Argent insuffisent")
+    
+    if demande=='1':
+        if mon_argent>=prix_Eau:
+            print("Eau distribué")
+            monnaie=mon_argent-prix_Eau
+        else:
+            print("Argent insuffisent")
+    elif demande=='2':  
+        if mon_argent>=prix_Jus:
+            print("Jus distribué")
+            monnaie=mon_argent-prix_Jus
+        else:
+            print("Argent insuffisent")
+    elif demande=='3':
+        if mon_argent>=prix_Soda:
+            print("Soda distribué")
+            monnaie=mon_argent-prix_Soda
+        else:
+            print("Argent insuffisent")
+    print("Solde restant :",monnaie)
 else:
     print("Choix invalide")
